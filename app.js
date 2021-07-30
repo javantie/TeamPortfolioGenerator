@@ -9,6 +9,8 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "dist");
 const outputPath = path.join(OUTPUT_DIR, "index.html");
 
+const render = require("./lib/RendererHtml");
+const Choices = require("inquirer/lib/objects/choices");
 
 let employeeRoster = [];
 
@@ -17,21 +19,53 @@ const managerQuestion = [
     type: "input",
     name: "managername",
     message: "What is the manager's name?",
+    validate: (managernameInput) => {
+      if (managernameInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "managerid",
     message: "What is the manager's id number?",
+    validate: (manageridInput) => {
+      if (manageridInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "manageremail",
     message: "What is the manager's email?",
+    validate: (manageremailInput) => {
+      if (manageremailInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "officenumber",
     message: "What is the manager's office number?",
+    validate: (officenumberInput) => {
+      if (officenumberInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
 ];
 
@@ -40,21 +74,53 @@ const engineerQuestion = [
     type: "input",
     name: "engineername",
     message: "What is the engineer's name?",
+    validate: (engineernameInput) => {
+      if (engineernameInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "engineerid",
     message: "What is the engineer's id number?",
+    validate: (engineeridInput) => {
+      if (engineeridInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "engineeremail",
     message: "What is the engineer's email?",
+    validate: (engineeremailInput) => {
+      if (engineeremailInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "githubname",
     message: "What is the engineer's GitHub username?",
+    validate: (githubnameInput) => {
+      if (githubnameInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
 ];
 
@@ -63,21 +129,53 @@ const internQuestion = [
     type: "input",
     name: "internname",
     message: "What is the intern's name?",
+    validate: (internnameInput) => {
+      if (internnameInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "internid",
     message: "What is the intern's id number?",
+    validate: (internidInput) => {
+      if (internidInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "internemail",
     message: "What is the intern's email?",
+    validate: (internemailInput) => {
+      if (internemailInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
   {
     type: "input",
     name: "schoolname",
     message: "What school does the intern's attend?",
+    validate: (schoolnameInput) => {
+      if (schoolnameInput) {
+        return true;
+      } else {
+        console.log("(Requierd) Please enter GitHub username!");
+        return false;
+      }
+    },
   },
 ];
 
@@ -86,7 +184,7 @@ const list = [
     type: "list",
     name: "EmployeeType",
     choices: ["Manager", "Engineer", "Intern", "Exit"],
-    message: "Hello, Please select a new employee.",
+    message: "Please select a new employee.",
   },
 ];
 
