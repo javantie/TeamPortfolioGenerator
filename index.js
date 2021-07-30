@@ -23,7 +23,7 @@ const managerQuestion = [
       if (managernameInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter A Manager!");
         return false;
       }
     },
@@ -36,7 +36,7 @@ const managerQuestion = [
       if (manageridInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter an ID number!");
         return false;
       }
     },
@@ -49,7 +49,7 @@ const managerQuestion = [
       if (manageremailInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter an email!");
         return false;
       }
     },
@@ -62,7 +62,7 @@ const managerQuestion = [
       if (officenumberInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter an office number!");
         return false;
       }
     },
@@ -78,7 +78,7 @@ const engineerQuestion = [
       if (engineernameInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter an engineer name!");
         return false;
       }
     },
@@ -91,7 +91,7 @@ const engineerQuestion = [
       if (engineeridInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter an ID number!");
         return false;
       }
     },
@@ -104,7 +104,7 @@ const engineerQuestion = [
       if (engineeremailInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter an email!");
         return false;
       }
     },
@@ -133,7 +133,7 @@ const internQuestion = [
       if (internnameInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter inter's name!");
         return false;
       }
     },
@@ -146,7 +146,7 @@ const internQuestion = [
       if (internidInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter inter ID number!");
         return false;
       }
     },
@@ -159,7 +159,7 @@ const internQuestion = [
       if (internemailInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter intern's email!");
         return false;
       }
     },
@@ -172,7 +172,7 @@ const internQuestion = [
       if (schoolnameInput) {
         return true;
       } else {
-        console.log("(Requierd) Please enter GitHub username!");
+        console.log("(Requierd) Please enter school intern is attending!");
         return false;
       }
     },
