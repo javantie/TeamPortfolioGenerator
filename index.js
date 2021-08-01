@@ -5,7 +5,6 @@ const Intern = require("./lib/Intern");
 const path = require("path");
 const fs = require("fs");
 
-
 const OUTPUT_DIR = path.resolve(__dirname, "dist");
 const outputPath = path.join(OUTPUT_DIR, "index.html");
 
@@ -183,7 +182,7 @@ const list = [
   {
     type: "list",
     name: "EmployeeType",
-    choices: ["Manager", "Engineer", "Intern", "Exit"],
+    choices: ["Engineer", "Intern", "Exit"],
     message: "Please select a new employee.",
   },
 ];
@@ -191,9 +190,6 @@ const list = [
 const promptSelection = () => {
   inquirer.prompt(list).then((answer) => {
     switch (answer.EmployeeType) {
-      case "Manager":
-        promptManager();
-        break;
       case "Engineer":
         promptEngineer();
         break;
@@ -203,20 +199,6 @@ const promptSelection = () => {
       default:
         generateHtml();
     }
-  });
-};
-
-const promptManager = () => {
-  inquirer.prompt(managerQuestion).then((answer) => {
-    employeeRoster.push(
-      new Manager(
-        answer.managername,
-        answer.managerid,
-        answer.manageremail,
-        answer.officenumber
-      )
-    );
-    promptSelection();
   });
 };
 
@@ -257,8 +239,7 @@ const generateHtml = () => {
 
 //promptSelection();
 
-
-const mainPrompt = () =>{
+const mainPrompt = () => {
   inquirer.prompt(managerQuestion).then((answer) => {
     employeeRoster.push(
       new Manager(
@@ -270,6 +251,6 @@ const mainPrompt = () =>{
     );
     promptSelection();
   });
-}
+};
 
 mainPrompt();
