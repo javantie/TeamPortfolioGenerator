@@ -255,4 +255,21 @@ const generateHtml = () => {
   });
 };
 
-promptSelection();
+//promptSelection();
+
+
+const mainPrompt = () =>{
+  inquirer.prompt(managerQuestion).then((answer) => {
+    employeeRoster.push(
+      new Manager(
+        answer.managername,
+        answer.managerid,
+        answer.manageremail,
+        answer.officenumber
+      )
+    );
+    promptSelection();
+  });
+}
+
+mainPrompt();
