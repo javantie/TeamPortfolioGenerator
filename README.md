@@ -26,4 +26,4 @@ If you have any questions about the repo, open an issue or contact [javantie](ht
 https://drive.google.com/file/d/10awbZzRZjmdoy2vikOb5lMByRnE-v5jU/view
 
 # ScreenShot 
-![alt txt](./assets/images/screenshot.png)
+![App Image](https://github.com/javantie/TeamPortfolioGenerator/blob/main/assets/images/screenshot.PNG)
