@@ -22,3 +22,8 @@ node index.js
 ​Contributors: Akeem Clarke
 # Questions
 If you have any questions about the repo, open an issue or contact [javantie](https://github.com/javantie) directly [javantieclarke@gmail.coom](mailto:javantieclarke@gmail.coom).
+# Walkthrough Demo Of App
+https://drive.google.com/file/d/10awbZzRZjmdoy2vikOb5lMByRnE-v5jU/view
+
+# ScreenShot 
+![alt txt](./assets/images/screenshot.png)
